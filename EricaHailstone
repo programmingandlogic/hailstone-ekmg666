@@ -11,6 +11,7 @@ public class Hailstone extends ConsoleProgram {
 
 	public void run() {
 		int n = readInt("Enter number:");
+		int counter = 0;
 		while (n > 1){	
 			if (n % 2 == 1) {
 				int odd = (n*3+1);
@@ -21,8 +22,10 @@ public class Hailstone extends ConsoleProgram {
 				int even = (n/2);
 				println (n + "is even so I make n/2 : "+ even +" ");
 				n = even; 
-			}	
-		}		
+			}
+			counter = (counter + 1);
+		}	
+		println ("This process took "+ counter +" to reach 1");
 	}
 
 }
